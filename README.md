@@ -61,3 +61,57 @@ int main()
     cout<<min;
 }
 
+
+// Given an array, predict if the array contains duplicates or not.
+#include<iostream>
+using namespace std;
+int main(){
+    int arr[]={2,4,5,7,7,9};
+    int n=sizeof(arr)/4;
+    bool flag=false;
+    for(int i=0;i<n;i++){
+        for(int j=i+1;j<n;j++){
+            if(arr[i]==arr[j]){
+            flag=true;
+            break;
+            }
+        } if(flag==true) break; 
+    }
+    if(flag==true) cout<<"duplicate Present";
+    else cout<<"No duplicate";
+}
+
+// WAP to find the smallest missing positive element in the sorted Array that contains only positive elements.
+#include<iostream>
+using namespace std;
+int main(){
+    int arr[]={1,2,4,5};
+    int n=sizeof(arr)/4;
+    int x=1;
+    bool flag=false;
+    for(int i=0;i<n;i++){
+        if(arr[i]<=0) continue;    
+    if(x!=arr[i])
+    {
+        flag=true;
+        cout<<i+1;
+        break;
+        }
+        else x++;
+    }
+    if(flag==false) cout<<"No smallest missing positive element in the sorted Array ";
+}
+
+
+//Predict the output.
+int main()
+{
+int sub[50], i ;
+for ( i = 0 ; i <= 48 ; i++ ) ;
+{
+sub[i] = i ;
+cout<<sub[i]<<endl ;
+}
+return 0;
+}
+OUTPUT: 49
